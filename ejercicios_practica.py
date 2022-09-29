@@ -123,7 +123,7 @@ def search_by_grade():
         conn = sqlite3.connect('secundaria.db')
         c = conn.cursor()
 
-        for row in c.execute("SELECT id, name, age FROM estudiante WHERE grade=3"):
+        for row in c.execute('SELECT id, name, age FROM estudiante WHERE grade=%g' %grado):
             print(row)
 
         conn.commit()
@@ -188,7 +188,7 @@ if __name__ == '__main__':
        values.append(input('Ingrese nombre de tutor: '))
        grupo.append(values)
     
-       if (i > 5):
+       if (i > 4):
             fill(grupo)
             grupo = []
 
