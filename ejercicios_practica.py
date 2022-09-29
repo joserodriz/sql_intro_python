@@ -158,8 +158,8 @@ def modify(id, name):
     conn = sqlite3.connect('secundaria.db')
     c = conn.cursor()
 
-    rowcount = c.execute("UPDATE estudiante SET name =? WHERE id =?",
-                         (name, id)).rowcount
+    c.execute("UPDATE estudiante SET name =? WHERE id =?",
+                         (name, id))
 
     # Save
     conn.commit()
