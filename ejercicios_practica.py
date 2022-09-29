@@ -132,8 +132,7 @@ def search_by_grade():
     else: 
         print('grado incorrecto')
         pass
-    
-   
+     
 
 def insert(new):
     print('Nuevos ingresos!')
@@ -175,7 +174,7 @@ if __name__ == '__main__':
     grupo = []
     values = []
 
-    while True and i < 3: 
+    while True and i < 10: 
        values = []     
        values.append(input('Ingrese nombre: '))
        values.append(int(input('Ingrese edad: ')))
@@ -189,7 +188,7 @@ if __name__ == '__main__':
        values.append(input('Ingrese nombre de tutor: '))
        grupo.append(values)
     
-       if (i > 1):
+       if (i > 5):
             fill(grupo)
             grupo = []
 
